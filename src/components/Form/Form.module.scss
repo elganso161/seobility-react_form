@@ -1,0 +1,55 @@
+.form {
+  margin: 0 auto;
+  max-width: 320px;
+  height: auto;
+  border: 1px solid rgb(21, 131, 221);
+  border-radius: 10px;
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+
+  .error {
+    margin: 0;
+    font-size: 12px;
+    color: red;
+  }
+
+  .userMessage {
+    width: 250px;
+    height: auto;
+    border: 1px solid rgb(21, 131, 221);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    resize: none;
+  }
+
+  input {
+    width: 250px;
+    height: 40px;
+    border: 1px solid rgb(21, 131, 221);
+    border-radius: 10px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+  }
+
+  .nameInput {
+  }
+
+  .submitButton {
+    width: 150px;
+    height: 40px;
+    background-color: #fff;
+    display: block;
+    border: 1px solid rgb(21, 131, 221);
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 auto;
+    transition: 0.2s;
+    &:hover {
+      background-color: rgb(21, 131, 221);
+    }
+    &:active {
+      background-color: rgba(21, 131, 221, 0.6);
+    }
+  }
+}

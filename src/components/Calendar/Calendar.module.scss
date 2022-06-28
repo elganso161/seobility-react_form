@@ -1,0 +1,118 @@
+.dateContainer {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.calendar {
+  margin: 0 auto;
+  width: 250px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(21, 131, 221);
+  text-transform: capitalize;
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 20px;
+
+  .calendarHeader {
+    position: relative;
+    border-radius: 10px 10px 0 0;
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+
+    .calendarHeaderArrowLeft {
+      cursor: pointer;
+    }
+    .calendarHeaderArrowRight {
+      cursor: pointer;
+    }
+  }
+
+  .calendarBody {
+    border-radius: 5px;
+    border: 1px solid rgb(21, 131, 221);
+    padding: 10px;
+
+    .calendarWeekNames {
+      height: 20px;
+      font-weight: 600;
+      font-size: 16px;
+      color: #000;
+      text-align: center;
+      align-items: center;
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 3px 3px;
+      margin-bottom: 10px;
+    }
+
+    .calendarDays {
+      font-size: 16px;
+      font-weight: 400;
+      color: #000;
+      text-align: center;
+      display: grid;
+      align-items: center;
+      grid-template-columns: repeat(7, 1fr);
+      grid-template-rows: 1fr;
+      gap: 3px 3px;
+
+      .calendarDay {
+        cursor: pointer;
+        &:hover {
+          opacity: 0.7;
+          background-color: gray;
+          border-radius: 5px;
+        }
+      }
+    }
+
+    .calendarAdditionalDay {
+      font-weight: 300;
+      color: rgba(0, 0, 0, 0.5);
+    }
+
+    .calendarSelectedItem {
+      color: #fff;
+      background-color: green;
+      border-radius: 5px;
+    }
+
+    .calendarTodayItem {
+      background-color: green;
+      border-radius: 5px;
+    }
+
+    .calendarPickItem {
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.7;
+        background-color: gray;
+        border-radius: 5px;
+      }
+    }
+    .calendarPickItemContainer {
+      font-weight: 400;
+      color: #000;
+      text-align: center;
+      display: grid;
+      align-items: center;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      gap: 3px 3px;
+      font-size: 16px;
+    }
+    .calendarUnchoosableYear {
+      font-weight: 300;
+      color: rgba(0, 0, 0, 0.5);
+    }
+  }
+}
