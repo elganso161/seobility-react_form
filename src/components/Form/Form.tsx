@@ -62,10 +62,19 @@ const Form: React.FC = () => {
         })}
         placeholder="Email"
       />
+      {errors.phoneNumber && (
+        <div className={styles.error}>{errors.phoneNumber.message}</div>
+      )}
       <input
+        type="number"
         className={styles.phoneInput}
-        {...register('phoneNumber', {})}
-        placeholder="+7(___)___-__-__"
+        {...register('phoneNumber', {
+          pattern: {
+            value: /^\(?([0-9]{4})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/,
+            message: 'Не верный номер телефона',
+          },
+        })}
+        placeholder="Введите номер телефона"
       />
       <Calendar
         selectDate={selectDate}
